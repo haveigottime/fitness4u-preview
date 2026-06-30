@@ -292,6 +292,11 @@ img { max-width: 100%; display: block; }
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--green);
 }
+.svc-price { margin: .9rem 0 0; color: var(--ink-soft); font-size: .98rem; }
+.svc-price strong {
+  font-family: "Fredoka", sans-serif; font-weight: 600;
+  color: var(--green-d); font-size: 1.45rem; margin-right: .15rem;
+}
 
 /* Swimming: wide feature card with a photo */
 .svc-wide {
