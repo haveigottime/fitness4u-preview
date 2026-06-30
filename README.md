@@ -1,21 +1,20 @@
 # Fitness 4 U Swim School — website
 
-A simpler, single-page site for Fitness 4 U Swim School (St Columb Major, Cornwall),
-rebuilt from the old multi-page site. Plain HTML and CSS — no build tools, no frameworks.
+A simpler, single-page site for Fitness 4 U (St Columb Major, Cornwall) — swimming
+lessons, aquatic fitness, rehabilitation, chair-based classes, sensory pool hire and
+sports massage. Plain HTML and CSS — no build tools, no frameworks.
 
 ## Files
 
 | File         | What it is                                            |
 |--------------|-------------------------------------------------------|
 | `index.html` | The whole page (content + a little JavaScript)        |
-| `styles.css` | All the styling                                       |
-| `images/`    | Drop photos in here                                   |
+| `styles.css` | All the styling (brand colours taken from the logo)   |
+| `images/`    | Logo and photos                                       |
 
 ## Viewing it
 
-Just open `index.html` in any web browser — double-click it, or drag it into a browser window.
-
-To preview it exactly as a server would (recommended), from this folder run:
+Open `index.html` in any web browser, or for an accurate preview run from this folder:
 
 ```
 python3 -m http.server 8000
@@ -23,32 +22,34 @@ python3 -m http.server 8000
 
 then visit <http://localhost:8000>.
 
-## Publishing it
+## Live preview
 
-Upload the whole folder (`index.html`, `styles.css`, `images/`) to any web host —
-the same place the current `fitness4uswimcornwall.co.uk` site is hosted will be fine.
-There's nothing to "build" or compile.
+Published free on GitHub Pages: **https://haveigottime.github.io/fitness4u-preview/**
+Pushing to the `main` branch updates the live site within a minute or two.
 
-> Note: the live domain currently has an **expired SSL certificate**. Worth asking
-> the host to renew it so the padlock works and the site isn't flagged as insecure.
+## Content & branding
 
-## Things to update with real details
+- **Logo** — `images/logo.png`, the recognised Fitness 4 U mark, used in the header and footer.
+- **Colours** — taken straight from the logo: blue `#1480b0` and lime green `#8cc63f`.
+- **Tagline** — "Making swimming, fitness & wellbeing accessible to everyone."
+- **Services** — Swimming Lessons, Aquatic Fitness, Rehabilitation & Wellbeing,
+  Chair-Based Classes, Sensory Pool Hire, Sports Massage.
+- **Booking links** go to the real Bookwhen pages:
+  - Group lessons — https://bookwhen.com/fitness4uswimcornwall
+  - Parent & baby — https://bookwhen.com/fitness4uswimcornwall75
+  - 1:1 & SEND — https://bookwhen.com/fitness4uswimcornwall121
+  - Sensory pool — https://bookwhen.com/fitness4uswimcornwallsphire
+- **Enquiries** use the existing Microsoft Form, and the phone/email/address are live.
 
-These are marked so they're easy to find:
+## Photos
 
-1. **Hero photo** — there's a placeholder box in the hero. To use a real photo:
-   - Save the image as `images/hero.jpg`
-   - In `styles.css`, find the comment *"If you add images/hero.jpg"* and un-comment the line under it
-   - In `index.html`, delete the `<div class="photo-placeholder">…</div>` block
-2. **Logo** — the wave-and-sun mark is drawn in code. If you'd rather use the real
-   Fitness 4 U logo, replace the `<svg>…</svg>` inside `<a class="brand">` with an
-   `<img src="images/logo.png" alt="Fitness 4 U">`.
-3. **Instagram link** — search `index.html` for `TODO` and paste in the real Instagram URL.
-4. **Photos generally** — any section can take a photo; happy to wire more in.
+Real photos supplied by the club are in `images/`. The page currently uses `hero.jpg`
+and the three `sensory*.jpg` shots. Spare photos are also included and ready to drop in:
+`lessons.jpg`, `jump.jpg`, `aquatic.jpg`, `rehab.jpg`, `instructor.jpg`, `lengths.jpg`.
 
-## Where the content came from
+## Still to confirm
 
-All wording is reworked (not copy-pasted) from the existing site's pages: Welcome,
-Swimming, Aquafit & Triathlon, Terms/FAQs, Testimonials and Contact. The full Terms
-& Conditions aren't shown on the page — the footer notes they're sent on booking,
-which keeps the page short. They can be added as a separate page if you'd like.
+- **Instagram link** — search `index.html` for `TODO` and paste in the real profile URL.
+- **Sensory pool prices** — shown as £25 / 30 mins and £50 / 60 mins; update if these change.
+- The full Terms & Conditions aren't on the page (the footer notes they're sent on booking);
+  they can be added as a separate page if wanted.
