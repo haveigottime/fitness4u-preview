@@ -257,35 +257,34 @@ img { max-width: 100%; display: block; }
    Services
    ============================================================ */
 .services { background: var(--white); }
-.svc-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1.4rem;
-}
+/* Bento grid: deliberately uneven so it doesn't read as six identical cards */
+.svc-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.3rem; }
 .svc {
+  grid-column: span 2;
   background: var(--bg);
   border: 1px solid var(--bg-2);
   border-radius: var(--radius-lg);
-  padding: 1.8rem 1.7rem;
+  padding: 1.7rem 1.6rem;
   transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
 }
-.svc:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); border-color: var(--blue-br); }
+.svc:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); border-color: var(--blue-br); }
 .svc-ic {
-  width: 52px; height: 52px;
+  width: 50px; height: 50px;
   display: grid; place-items: center;
-  font-size: 1.5rem;
+  color: var(--blue);
   background: var(--white);
   border: 1px solid var(--bg-2);
   border-radius: 14px;
   margin-bottom: 1rem;
   box-shadow: var(--shadow-soft);
 }
-.svc h3 { font-size: 1.35rem; color: var(--blue-deep); margin-bottom: .7rem; }
+.svc-ic svg { width: 26px; height: 26px; }
+.svc h3 { font-size: 1.3rem; color: var(--blue-deep); margin-bottom: .6rem; }
 .svc p { margin: 0; color: var(--ink-soft); }
-.svc ul { margin: 0; padding: 0; list-style: none; }
+.svc ul { margin: .2rem 0 0; padding: 0; list-style: none; }
 .svc ul li {
   color: var(--ink-soft);
-  padding: .28rem 0 .28rem 1.4rem;
+  padding: .26rem 0 .26rem 1.4rem;
   position: relative;
 }
 .svc ul li::before {
@@ -293,7 +292,25 @@ img { max-width: 100%; display: block; }
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--green);
 }
-.svc-link p { margin-bottom: .2rem; }
+
+/* Swimming: wide feature card with a photo */
+.svc-wide {
+  grid-column: span 4;
+  padding: 0; overflow: hidden;
+  display: grid; grid-template-columns: 1.15fr 1fr;
+}
+.svc-wide .svc-body { padding: 1.8rem 1.7rem; }
+.svc-wide .svc-media { background-size: cover; background-position: center; min-height: 240px; }
+
+/* Sensory: full-width banner that bridges into the section below */
+.svc-banner {
+  grid-column: span 6;
+  padding: 0; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1.35fr;
+}
+.svc-banner .svc-media { background-size: cover; background-position: center; min-height: 200px; }
+.svc-banner .svc-body { padding: 1.9rem; align-self: center; }
+.svc-banner p { margin-bottom: .2rem; }
 
 /* ============================================================
    Sensory pool
@@ -518,6 +535,11 @@ details p { margin: 0 0 1rem; color: var(--ink-soft); padding-right: 2rem; }
   .hero-grid, .about-grid, .faqs-grid, .contact-grid, .sensory-grid { grid-template-columns: 1fr; }
   .hero-photo { max-width: 380px; margin-top: 1rem; }
   .quote-grid { columns: 1; }
+
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc, .svc-wide, .svc-banner { grid-column: auto; }
+  .svc-wide, .svc-banner { grid-template-columns: 1fr; }
+  .svc-wide .svc-media, .svc-banner .svc-media { min-height: 200px; order: -1; }
 
   .nav-toggle { display: flex; }
   .primary-nav {
